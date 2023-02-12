@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {HelloComponent} from "./hello/hello.component";
 import {TitleComponent} from "./title/title.component";
 import {CatComponent} from "./cat/cat.component";
+import {AppComponent} from "./app.component";
 
 const routes: Routes = [
   {path:'hello',
@@ -11,8 +12,8 @@ const routes: Routes = [
       {path:'cat', component: CatComponent}
     ]
   },
-  {path:'title', component: TitleComponent},
-  {path:'', component: TitleComponent}
+  {path:'title/:id/:name', component: TitleComponent},
+  {path:'', component: HelloComponent}
 ];
 
 @NgModule({

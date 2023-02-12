@@ -1,7 +1,7 @@
 <p>I am app</p>
-<a [routerLink]="['title']">title</a>
+<a [routerLink] ="['title', 1, 'Mary']">title</a>
 <br>
-<a [routerLink]="['hello']">hello</a>
+<a [routerLink]="['hello']" [queryParams]="{name : 'Jack', id : 3}">hello</a>
 <br>
 <a [routerLink]="['hello/cat']">app cat</a>
 <router-outlet></router-outlet>

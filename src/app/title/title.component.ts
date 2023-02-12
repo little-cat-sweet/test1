@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-title',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private routerInfo: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routerInfo.params.subscribe((params : Params) => {
+      console.log("title : " + JSON.stringify(params))
+    })
   }
 
 }
